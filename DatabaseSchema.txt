@@ -1,0 +1,47 @@
+CREATE TABLE admin (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE books (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    category VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE review (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    review TEXT NOT NULL,
+    rating INT NOT NULL,
+    bookname VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE PasswordChangeRequest (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL,
+    new_password VARCHAR(255) NOT NULL,
+    request_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE UserDetails (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone BIGINT,
+    address VARCHAR(255)
+);
+
+
+
+
